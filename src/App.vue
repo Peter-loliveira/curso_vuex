@@ -14,9 +14,7 @@
 </template>
 
 <script>
-
 import AppProducts from './components/products/AppProducts.vue';
-
 export default {
   name: "App",
   components: {

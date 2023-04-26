@@ -11,17 +11,17 @@ export default createStore({
       {
         id: 1,
         name: 'Bola',
-        price: 100
+        price: '100,00'
       },
       {
         id: 2,
         name: 'Chuteira',
-        price: 200
+        price: '200,00'
       },
       {
         id: 3,
         name: 'Meião',
-        price: 50
+        price: '50,00'
       },
     ]
   },
@@ -29,10 +29,7 @@ export default createStore({
   },
   mutations: {
     storeUser(state, data){
-      console.log(this.state.user);
       state.user = data;
-      console.log(this.state.user);
-
     }
   },
   actions: {

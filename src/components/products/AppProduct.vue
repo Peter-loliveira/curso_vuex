@@ -1,6 +1,8 @@
 <template>
-    <div>
-        {{ $store.state.product[id].name }}
+    <div class="lista">
+         <b>Produto: </b>{{$store.state.products[this.id - 1].name}} -
+         <b>Valor: </b> R$ {{$store.state.products[this.id - 1].price}}
+         <hr>
     </div>
 </template>
 
@@ -8,16 +10,17 @@
     export default {
         name: 'AppProduct',
         props:['id'],
-        data(){
-            return{
-
-            }
-        },
         components: {
         }
     }
 </script>
 
 <style>
-
+    .lista{
+        margin-bottom: 5px;
+        width: 20%;
+        margin: 0 auto;
+        justify-content: space-between;
+        
+    }
 </style>
