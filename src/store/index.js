@@ -23,13 +23,19 @@ export default createStore({
         name: 'Meião',
         price: '50,00'
       },
-    ]
+    ],
+    cart:[
+
+    ],
   },
   getters: {
   },
   mutations: {
     storeUser(state, data){
       state.user = data;
+    },
+    addProduct(state, data){
+      state.cart.push(data)
     }
   },
   actions: {

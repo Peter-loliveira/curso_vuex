@@ -4,7 +4,7 @@
   <AppProducts />
   <hr>
   <div>
-    <button @click="updateUser()">Atualizar Perfil</button>
+    <button @click="updateUser">Atualizar Perfil</button>
     <h3>
       {{ $store.state.user.first_name }} {{ $store.state.user.last_name }}
       <br />

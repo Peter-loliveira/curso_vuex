@@ -1,26 +1,47 @@
 <template>
-    <div class="lista">
-         <b>Produto: </b>{{$store.state.products[this.id - 1].name}} -
-         <b>Valor: </b> R$ {{$store.state.products[this.id - 1].price}}
-         <hr>
+    <div class="card">
+        <div class="product">
+            <b>Produto: </b>{{product.name}} -
+            <b>Valor: </b> R$ {{product.price}}
+            <button @click="addProduct()">Comprar</button>
+        </div>
     </div>
+
 </template>
 
 <script>
     export default {
         name: 'AppProduct',
-        props:['id'],
+        props: {
+            product: Object
+    },
         components: {
+        },
+        methods: {
+            addProduct(){
+                this.$store.commit('addProduct', this.product)
+                alert(`${this.product.name} Adicionado ao carrinho`)
+            }
         }
     }
 </script>
 
 <style>
-    .lista{
+    .card{
         margin-bottom: 5px;
         width: 20%;
         margin: 0 auto;
-        justify-content: space-between;
+        padding: 5px 0;
+        background-color: aquamarine;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        width: 500px;
+    }
+    
+    .product{
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
         
     }
 </style>
